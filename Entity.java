@@ -9,13 +9,20 @@ public class Entity {
     private String clue1; //true clue
     private String clue2; //false clue
     private boolean villain;
+    private boolean NPC;
 
-    public Entity(String title, String dialogue, String clue1, String clue2) {
+    public Entity(String title, String dialogue, String clue1, String clue2, String npc) {
         this.title = title;
         this.dialogue = dialogue;
         this.clue1 = clue1;
         this.clue2 = clue2;
-        villain = false;
+        this.villain = false;
+
+        if (npc.contains("NPC")) {
+            this.NPC = true;
+        }
+        else
+            this.NPC = false;
     }
 
     /**
@@ -61,5 +68,7 @@ public class Entity {
     public boolean getTag() {
         return villain;
     }
+
+    public boolean getNPC() {return NPC;}
 
 }

@@ -5,16 +5,17 @@ import java.io.FileNotFoundException;
 
 public class gameStats {
 
-    private ArrayList<Entity> entities = new ArrayList<>();
+    private ArrayList<Entity> entities;
 
     public gameStats() {
 
         String file_path = "C:\\Users\\emma\\Desktop\\CS 321 Programs\\cs321Draft\\src\\entities.txt"; //file path on my computer;
         //still need to determine a method on
-
-
         entities = buildEntities(file_path);
+        entities.get(0).tagEntity();
 
+        voteManager jones = new voteManager(entities);
+        jones.voteNow();
     }
 
     private ArrayList<Entity> buildEntities(String file_path) {
@@ -36,6 +37,7 @@ public class gameStats {
         String dia = "";
         String c1 = "";
         String c2 = "";
+        String npc = "";
 
         while (data.hasNextLine()) {
             String line = data.nextLine();
@@ -52,8 +54,11 @@ public class gameStats {
             else if (line.contains("Clue2: ")) {
                 c2 = line.substring(7);
             }
+            else if (line.contains("NPC") || line.contains("ITEM")) {
+                npc = line;
+            }
             else {
-                entities.add(new Entity(title, dia, c1, c2));
+                entities.add(new Entity(title, dia, c1, c2, npc));
             }
         }
         return entities;
