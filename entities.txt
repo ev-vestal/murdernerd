@@ -2,59 +2,71 @@ Title: Jill Harley
 Dialogue: We used to be very close, you know. I'm in love with them. [She cries] If only I wasn't at Carla's last night...
 Clue1: Jill had an alibi at Carla's.
 Clue2: Jill was in love with the victim.
+NPC
 **
 Title: Wolf Figurine
 Dialogue: This figurine seems to have dried blood on it.
 Clue1: The wolf figuring must have been near the murder scene.
 Clue2: The murderer might have moved the figurine.
+ITEM
 **
 Title: Clean Knife
 Dialogue: It is a silver knife that is strangely clean.
 Clue1: The murderer must have cleaned the knife and placed it in the drawer.
 Clue2: It's probably just a clean kitchen knife. It's likely unimportant.
+ITEM
 **
 Title: Carla Oden
 Dialogue: It's a shame they died. I needed their help last night moving in. I had to do it all by myself.
 Clue1: Carla was alone last night.
 Clue2: Carla seems apathetic about the victim's death.
+NPC
 **
 Title: Harry Geohagen
 Dialogue: I have to replace the carpets now. There's blood on them... it's going to be expensive.
 Clue1: Harry seems apathetic about the victim's death.
 Clue2: Harry is bothered by the blood.
+NPC
 **
 Title: Suspicious Book
 Dialogue: The book has notes scribbled on the sides... most of them seem to be numbers. They seem to be in the victim's handwriting.
 Clue1: The book might have something to do with financial records.
 Clue2: The book might have address information in it.
+ITEM
 **
 Title:
 Dialogue:
 Clue1:
 Clue2:
+ITEM
 **
 Title:
 Dialogue:
 Clue1:
 Clue2:
+ITEM
 **
 Title:
 Dialogue:
 Clue1:
 Clue2:
+ITEM
 **
 Title:
 Dialogue:
 Clue1:
 Clue2:
+ITEM
 **
 Title:
 Dialogue:
 Clue1:
 Clue2:
+ITEM
 **
 Title:
 Dialogue:
 Clue1:
 Clue2:
+ITEM
 **
