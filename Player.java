@@ -1,60 +1,43 @@
-import java.awt.*;
-import java.io.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Scanner;
 
 
-public class Player {
-    public static void main(String[] args)
+public class Player
+{
+    //gameStats obj = new gameStats();
+    //String c1, c2;
+    private Entity passClue;
+    private gameStats getEntity;
+    Collection<ArrayList<Entity>> player = new ArrayList<ArrayList<Entity>>();
+    ArrayList<Entity> notepad = new ArrayList<Entity>();
+   // ArrayList<String> player = new ArrayList<String>();
+    private ArrayList<Entity> entities;
+
+
+    public Player()
     {
-
+        System.out.println("Player 1, please enter your user name: ");
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        System.out.println("Player 2, please enter your user name: ");
+        Scanner input = new Scanner(System.in);
+        String t = scan.next();
+        
+        System.out.println(s + ", please vote");
+        System.out.println(t + ", please vote");
     }
 
-    private String clue;
-    private ArrayList<String> notepad = new ArrayList<String>();
-
-    public void addtoNotepad() {
-        notepad.add(clue);
-    }
-
-    public void displayNotepad(){
-        System.out.println(clue);
-    }
-
-    public void playerTurn()
+    public void setPassClue()
     {
+        //testing .add function
+        player.add(entities);
+        System.out.println(player);
+    }
+    public void Player(ArrayList<Entity> entities)
+    {
+        this.entities = entities;
+
 
     }
-
-
-
-
-       //Creates a text file and then add information to it in Intellij
-    /*    try {
-            PrintWriter outputStream = new PrintWriter("Example.txt");
-
-            while (line.length() > 0) ;
-            line = keyboard.next();
-            outputStream.println(line);
-
-            ArrayList<String> list = new ArrayList<String>();
-
-            while (keyboard.hasNextLine())
-            {
-                String s = keyboard.nextLine();
-                list.add(s);
-                if (s.equals("")) break;
-            }
-        }
-        catch(FileNotFoundException ex)
-        {
-            System.out.println("Error!!") ;
-        }*/
-
-
-
-
-
-
 }
-
