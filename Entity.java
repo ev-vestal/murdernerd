@@ -3,6 +3,8 @@
 // it needs a way to display the dialogue of each entity
 // and it needs a way to get the clue
 
+import java.awt.*;
+
 public class Entity {
     private String title;
     private String dialogue;
@@ -10,6 +12,8 @@ public class Entity {
     private String clue2; //false clue
     private boolean villain;
     private boolean NPC;
+    private Sprite sprite;
+    private int x, y;
 
     public Entity(String title, String dialogue, String clue1, String clue2, String npc) {
         this.title = title;
@@ -19,11 +23,16 @@ public class Entity {
         this.villain = false;
 
         if (npc.contains("NPC")) {
-            this.NPC = true;
+            NPC = true;
         }
-        else
-            this.NPC = false;
+        else {
+            NPC = false;
+        }
+
+        setSprite();
+
     }
+
 
     /**
      * the display box for the characters. Might convert to a string later.
@@ -70,5 +79,23 @@ public class Entity {
     }
 
     public boolean getNPC() {return NPC;}
+
+    private void setSprite() {
+        int x = (int)(750*Math.random());
+        int y = (int)(550*Math.random());
+        int width = (int)(40*Math.random());
+
+        if (NPC == true) {
+            sprite = new Sprite(x, y, width, Color.RED);
+        }
+        else {
+            sprite = new Sprite(x, y, width, Color.BLUE);
+        }
+
+    }
+
+    public Sprite getSprite() {
+        return sprite;
+    }
 
 }
