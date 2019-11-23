@@ -15,6 +15,11 @@ public class GameControler {
     private JPanel panel1;
     private JButton quitGameButton;
     private JTextField textField1;
+
+    /**
+     * This will set up the first gui form.
+     * @param args
+     */
     public static void main(String[] args)
     {
         JFrame frame=new JFrame("Murdernerd");
@@ -26,12 +31,22 @@ public class GameControler {
         frame.pack();
         frame.setVisible(true);
     }
+
+    /**
+     * This is Game controler class to set up whole interface for game
+     */
     public GameControler()
     {
         //VoteManger vote=new VoteManger();
-        //Entity player=new Entity();
+        gameStats gameData = new gameStats();
+        Entity test = gameData.getEntity();
+        String name = test.getTitle();
         //ImageIcon image=new ImageIcon("background.jpg");
         panel1.setBackground(Color.PINK);
+        /**
+         * performed start button action.
+         * Start button will contain all the frame shows up later.
+         */
         startGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,6 +59,10 @@ public class GameControler {
                 frame2.setBackground(Color.CYAN);
                 JButton frameTwoVoteButton=new JButton("Vote Now");
                 frame2.add(frameTwoVoteButton,BorderLayout.SOUTH);
+                /**
+                 * This is vote button on frame two.
+                 * It will performed on vote button.
+                 */
                 frameTwoVoteButton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -61,7 +80,10 @@ public class GameControler {
                         frame3.add(firstNPCButton,BorderLayout.WEST);
                         frame3.add(secondNPCButton,BorderLayout.CENTER);
                         frame3.add(thirdNPCButton,BorderLayout.EAST);
-
+                        /**
+                         * This is the first NPC button.
+                         * It wil perform when click this button.
+                         */
                         firstNPCButton.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
@@ -72,6 +94,10 @@ public class GameControler {
                                 }
                             }
                         });
+                        /**
+                         * This is the second NPC button.
+                         * It wil perform when click this button.
+                         */
                         secondNPCButton.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
@@ -82,6 +108,10 @@ public class GameControler {
                                 }
                             }
                         });
+                        /**
+                         * This is the third NPC button.
+                         * It wil perform when click this button.
+                         */
                         thirdNPCButton.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
@@ -105,7 +135,10 @@ public class GameControler {
 
         });
 
-
+        /**
+         * This is quite game button.
+         * It will perform when you click quit game button.
+         */
         quitGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
